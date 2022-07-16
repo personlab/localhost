@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  background: #111;
+}
+.contact-us {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.userForm {
+ position: relative;
+ width: 280px;
+ margin-top: 40px;
+}
+.userForm input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1d2b3a;
+  border-radius: 4px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+.userForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1d2b3a;
+  border-radius: 4px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+.userForm input[type = "file"] {
+  background: #030303;
+  margin-top: 20px;
+}
+.userForm input[type = "submit"] {
+  margin-top: 5px;
+  background: #292a2e;
+}
+.error {
+  position: absolute;
+  color: red;
+  margin-left: 85%;
+  margin-top: -13px;
+}
+.sex {
+  display: flex;
+  color: #babbbf;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.genderUser {
+  position: relative;
+  display: flex;
+  width: 80%;
+  margin-left: 25%;
+  margin-top: -28px;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 13px;
+  color: #89b4f8;
+}
+.captchas {
+  width: 100%;
+  height: 56px;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: aqua;
+  justify-content: center;
+  align-items: center;
+}
+/*  кнопка */
+button span {
+  color: #babbbf;
+}
+/* конец кнопки */
+span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.userForm textarea:valid ~ span,
+.userForm textarea:focus ~ span {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #1d2b3a;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+.userForm input:valid ~ span,
+.userForm input:focus ~ span {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #1d2b3a;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+.userForm:nth-child(1) input:valid ~ span,
+.userForm:nth-child(1) input:focus ~ span {
+  background: #00dfc4;
+  color: #1d2b3a;
+  border-radius: 2px;
+}
+.userForm:nth-child(1) textarea:valid ~ span,
+.userForm:nth-child(1) textarea:focus ~ span {
+  background: #00dfc4;
+  color: #1d2b3a;
+  border-radius: 2px;
+}
+.userForm input:valid,
+.userForm input:focus {
+  border: 1px solid #00dfc4;
+}
+.userForm textarea:valid,
+.userForm textarea:focus {
+  border: 1px solid #00dfc4;
+}
+.contact-us a {
+  color: #fff;
+  text-decoration: none;
+}
+/* button */
+.btn {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  background: #8a2be200;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-color: #8a2be200;
+  border-radius: 4px;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #89b4f8;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #89b4f8;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+/*добавляет второй цвет*/
+.btn:nth-child(2)::before,
+.btn:nth-child(2)::after {
+  background: #fe1a6f;
+}
+/**/
+.btn:hover::before,
+.btn:hover::after {
+  width: 50%;
+  transition-delay: 0s;
+}
+.btn span {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.5s;
+  margin-left: 34%;
+}
+.btn span:nth-child(1) {
+  transition-delay:  0.75s;
+}
+.btn:hover span:nth-child(1) {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+.btn span:nth-child(2) {
+  transform: scale(3);
+  opacity: 0;
+  color: #111;
+  transition-delay: 0s;
+}
+.btn:hover span:nth-child(2) {
+  transform: scale(1);
+  transition-delay: 0s;
+  opacity: 1;
+  z-index: 10;
+  transition-delay: 0.5s;
+}
+/* btn_2*/
+.btn_2 {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  background: #8a2be200;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-color: #8a2be200;
+  border-radius: 4px;
+}
+.btn_2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #89b4f8;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+.btn_2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #89b4f8;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+/*добавляет второй цвет*/
+.btn_2:nth-child(2)::before,
+.btn_2:nth-child(2)::after {
+  background: #fe1a6f;
+}
+/**/
+.btn_2:hover::before,
+.btn_2:hover::after {
+  width: 50%;
+  transition-delay: 0s;
+}
+.btn_2 span {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.5s;
+  margin-left: 13%;
+}
+.btn_2 span:nth-child(1) {
+  transition-delay:  0.75s;
+}
+.btn_2:hover span:nth-child(1) {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+.btn_2 span:nth-child(2) {
+  transform: scale(3);
+  opacity: 0;
+  color: #111;
+  transition-delay: 0s;
+}
+.btn_2:hover span:nth-child(2) {
+  transform: scale(1);
+  transition-delay: 0s;
+  opacity: 1;
+  z-index: 10;
+  transition-delay: 0.5s;
+}
